@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 
@@ -20,7 +20,10 @@ namespace FakUPunch
         {
             public static void Postfix(Punch __instance)
             {
-                __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                if(__instance.type == FistType.Standard)
+                {
+                    __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                }
             }
         }
 
@@ -29,7 +32,10 @@ namespace FakUPunch
         {
             public static void Postfix(Punch __instance)
             {
-                __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                if (__instance.type == FistType.Standard)
+                {
+                    __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                }
             }
         }
 
@@ -38,7 +44,10 @@ namespace FakUPunch
         {
             public static void Postfix(Punch __instance)
             {
-                __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                if (__instance.type == FistType.Standard)
+                {
+                    __instance.anim.runtimeAnimatorController = punchbundle.LoadAsset<RuntimeAnimatorController>("Punch");
+                }
             }
         }
     }
