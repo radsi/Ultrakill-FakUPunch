@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FakUPunch
 {
-    [BepInPlugin("Radsi", "FakUPunch", "1.0.0")]
+    [BepInPlugin("radsi.fakupunch", "FakUPunch", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
         public static AssetBundle punchbundle;
